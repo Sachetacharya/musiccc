@@ -1,0 +1,79 @@
+.input-group input {
+  width: 100%;
+  border-radius: 10px !important;
+  padding: 10px;
+  height: 48px;
+  border: 1px solid #f1eeee;
+  /* margin-bottom: 15px; */
+}
+
+input[type=date] {
+  color: #414141;
+}
+
+.input-group {
+  margin-bottom: 40px !important;
+}
+
+.placeholder-chito {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  /* font-size: 14px; */
+  padding: 0px 5px;
+  color: #414141;
+  transition: 0.3s;
+  pointer-events: none;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+.input-chito:not(:-moz-placeholder-shown) + .placeholder-chito {
+  top: -10px;
+  background: white;
+  /* border: 1px solid #f1eeee; */
+  color: #414141;
+}
+
+.input-chito:not(:-ms-input-placeholder) + .placeholder-chito {
+  top: -10px;
+  background: white;
+  /* border: 1px solid #f1eeee; */
+  color: #414141;
+}
+
+.input-chito:focus + .placeholder-chito,
+.input-chito:not(:placeholder-shown) + .placeholder-chito {
+  top: -10px;
+  background: white;
+  /* border: 1px solid #f1eeee; */
+  color: #414141;
+}
+
+.button-login {
+  border: none;
+  background-color: #1D75BA;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+a {
+  all: unset !important;
+  cursor: pointer !important;
+}
+
+.input-select-option option {
+  width: 100%;
+}/*# sourceMappingURL=modal.css.map */

@@ -1,0 +1,148 @@
+ <body>
+    <div class="d-flex justify-content-center align-items-center " style="height:100vh">
+        <button>
+            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first
+                modal</a>
+        </button>
+    </div>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="loginForm" id='login_form' onsubmit="return login()" method="post">
+                        <div class="input-group ">
+                            <input type="text" class="input-chito font-s-6" placeholder=" " name="mobileOrEmail"
+                                id="mobile_email" onkeyup="ismobileOrEmail()" autofocus />
+                            <label class="placeholder-chito font-s-4">Mobile number
+                            </label>
+                            <div class="text-danger  validation position-absolute   font-s-6" id="mobileOrEmail"></div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="input-chito font-s-6" placeholder=" " name="password"
+                                id="pass_word" id="loginPassword" />
+                            <label class="placeholder-chito font-s-4">Password
+                            </label>
+                            <div class="text-danger  validation position-absolute   font-s-6" id="password"></div>
+                            <i class="bi bi-eye-fill icon" id="eye-toggle-login"></i>
+
+                        </div>
+
+
+
+
+                        <div class="d-flex justify-content-end    ">
+                            <a href="../forgot-password"> Forgot Password ?</a>
+
+                        </div>
+                        <div class="pt-4">
+                            <a href="../../dashboard-layout/middle-body"><button type="submit"
+                                    class="button-login hover " type="submit" id="loginButton">LOGIN </button></a>
+                        </div>
+
+
+                    </form>
+
+                    <div class="text-center pt-4 ">Don't have account? <span class="">
+                            <a class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                                Create
+                                Account</a></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="font-w-2 pb-3 font-s-1 ">
+                        Let's Get Started
+                    </div>
+                    <div class="font-s-5  text-tertiary-chito pb-3">
+                        By continuing you agree to our <span class="text-primary-chito click">User Agreement</span> and <span class="text-primary click">
+                            Privacy
+                            policy.</span>
+                    </div>
+                    
+                    <form action="" name="registationForm">
+                        <div class="input-group ">
+                            <input type="text" class="input-chito font-s-6" placeholder=" " name="fullName" onkeyup="isName()" />
+                            <label class="placeholder-chito font-s-4">Full name
+                            </label>
+                            <div class="text-danger  validation position-absolute  font-s-6" id="fullName"></div>
+                        </div>
+                        <div class="input-group ">
+                            <input type="text" class="input-chito font-s-6" placeholder=" " name="mobileNumber" onkeyup="isNumber()" />
+                            <label class="placeholder-chito font-s-4">Mobile Number
+                            </label>
+                            <div class="text-danger  validation position-absolute  font-s-6" id="mobileNumber"></div>
+                    
+                        </div>
+                        <div class="input-group ">
+                            <input type="text" class="input-chito font-s-6" placeholder=" " name="eMail" onkeyup="isEmail()" />
+                            <label class="placeholder-chito font-s-4">Email
+                            </label>
+                            <div class="text-danger  validation position-absolute  font-s-6" id="eMail"></div>
+                    
+                        </div>
+                    
+                        <p class="m-0 pb-1 text-tertiary-chito font-w-3">Gender</p>
+                        <div class="select text-tertiary-chito  pb-4 row  name=" gender">
+                            <div class="col-11 d-flex justify-content-between pb-1">
+                                <div> <input type="radio" name="gender" id="male" checked>
+                                    <label for="male"> Male</label>
+                                </div>
+                                <div> <input type="radio" name="gender" id="female">
+                                    <label for="female"> Female</label>
+                                </div>
+                    
+                                <div><input type="radio" name="gender" id="others">
+                                    <label for="others"> Others</label>
+                                </div>
+                    
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                        <div class="input-group ">
+                            <input type="text" class="input-referCode" placeholder=" " name="referCode" />
+                            <label class="placeholder-referCode font-s-4">Refer Code
+                    
+                            </label>
+                            <div class="text-danger   position-absolute mt-1 mb-2 font-s-6" id=""></div>
+                    
+                        </div>
+                    
+                    </form>
+                    
+                    
+                    <div class="pt-4">
+                        <a href="../otp"><button class="button-login hover " onclick="registrationValidation()"> NEXT </button></a>
+                    </div>
+                    <div class="text-center end font-s-5 pt-4">Already have account? <span class="font-w-4 text-primary-chito click"> <a href="../login">Sign
+                                In</a> </span>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+                        first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body> 
